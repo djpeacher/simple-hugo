@@ -1,8 +1,10 @@
 {{ define "main" }}
+    {{ partial "heading.html" . }}
+    {{ .Content }}
     {{ range .Pages }}
         <div class="blog-item">
             <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <p class="meta"><i>{{ .Description }}</i></p>
+            <p class="meta"><i>{{ default .Summary .Description }}</i></p>
             {{ partial "metadata.html" . }}
         </div>
     {{ end }}

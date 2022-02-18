@@ -1,0 +1,4 @@
+{{ if not .Site.Params.UpdateHeader }}
+    <h2>{{ .Title }}</h2>
+    {{ if .Description }}<p class="meta blog-item">{{ .Description }}</p>{{ end }}
+{{ end }}

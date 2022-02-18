@@ -2,10 +2,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-    <link rel="stylesheet" href='{{ "css/simple-plus.css" | absURL }}'>
-    <link rel="stylesheet" href='{{ "css/custom.css" | absURL }}'>
-    <link rel="icon" type="image/png" sizes="32x32" href='{{ "img/favicon-32x32.png" | absURL }}'>
-    <link rel="icon" type="image/png" sizes="16x16" href='{{ "img/favicon-16x16.png" | absURL }}'>
+    <link rel="stylesheet" href='/css/simple-plus.css'>
+    <link rel="stylesheet" href='/css/custom.css'>
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     {{ $title := print .Title " | " .Site.Title}}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <title>{{ $title }}</title>

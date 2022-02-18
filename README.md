@@ -1,4 +1,5 @@
 # simple-hugo
+
 > ⚠️ Work in progress.
 
 A Hugo theme using [Simple.css](https://simplecss.org).
@@ -20,20 +21,19 @@ hugo server -D
 ```
 
 ### Settings
+
 ```yaml
 baseURL: 'http://example.org/'
 languageCode: en-us
 title: My New Hugo Site # Used in title.
 theme: simple-hugo
-copyright: "Made with ❤️ by Barry Bluejeans"
+copyright: 'Made with ❤️ by Barry Bluejeans'
 params:
   title: My New Hugo Site # Used in header > nav > h1.
   subtitle: Very Cool # Used in header > nav > p.
-  updateHeader: false # If true, updates header with front matter title/description. default: true
-  header_menu_pos: bottom # Will place header nav above or below header title. "top" | "bottom" default: top
-  footer_menu_pos: bottom # Will place footer nav above or below copyright. "top" | "bottom" default: top
+  updateHeader: false # If true, header will contain front matter title and description. If false, header will contain site title and subtitle and front matter will display in <main>. default: true
 menu:
-  header: # menu for header.
+  headerTop: # Menu for header. Can be changed to headerBottom.
     - name: Link 1
       url: https://example.com # will open in new tab
       weight: 1
@@ -43,7 +43,7 @@ menu:
     - name: Link 3
       url: /link/
       weight: 3
-  footer: # menu for footer.
+  footerTop: # Menu for footer. Can be changed to footerBottom.
     - name: Link 4
       url: https://example.com # will open in new tab
       weight: 1
@@ -53,5 +53,4 @@ menu:
     - name: Link 6
       url: /link/
       weight: 3
-
 ```

@@ -1,0 +1,18 @@
+<header>
+    {{ if eq (default "top" .Site.Params.header_menu_pos) "top" }}
+        {{ partial "navigation" (dict "menu" .Site.Menus.header ) }}
+    {{ end }}
+
+    {{ if and (.Site.Params.UpdateHeader | default true) (or .Title .Description) }}
+        {{ if .Title }}<h1>{{ .Title | safeHTML }}</h1>{{ end }}
+        {{ if .Description }}<p>{{ .Description | safeHTML }}</p>{{ end }}
+    {{ else }}
+        {{ $title := default .Site.Title .Site.Params.Title }}
+        {{ if .Site.Title }}<h1>{{ $title | safeHTML }}</h1>{{ end }}
+        {{ if .Site.Params.Subtitle }}<p>{{ .Site.Params.Subtitle | safeHTML }}</p>{{ end }}
+    {{ end }}
+
+    {{ if eq .Site.Params.header_menu_pos "bottom" }}
+        {{ partial "navigation" (dict "menu" .Site.Menus.header ) }}
+    {{ end }}
+</header>

@@ -1,0 +1,8 @@
+{{ if .menu }}
+    <nav>
+        {{ range .menu }}
+            {{ $newTab := (urls.Parse .URL).Scheme }}
+            <a href="{{ .URL }}" {{ if $newTab }}target="blank"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+    </nav>
+{{ end }}

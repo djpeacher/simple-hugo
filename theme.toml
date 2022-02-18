@@ -1,0 +1,12 @@
+name = "simple-hugo"
+license = "MIT"
+licenselink = "https://github.com/djpeacher/simple-hugo/blob/master/LICENSE"
+description = "A simple theme for Hugo using Simple.css."
+homepage = "https://github.com/djpeacher/simple-hugo/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Jonathan Peacher"
+  homepage = "https://www.djpeacher.com"

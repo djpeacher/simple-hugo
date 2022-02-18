@@ -1,0 +1,11 @@
+<footer>
+    {{ if eq (default "top" .Site.Params.footer_menu_pos) "top" }}
+        {{ partial "navigation" (dict "menu" .Site.Menus.footer ) }}
+    {{ end }}
+
+    <p>{{ .Site.Copyright | safeHTML }}</p>
+
+    {{ if eq .Site.Params.footer_menu_pos "bottom" }}
+        {{ partial "navigation" (dict "menu" .Site.Menus.footer ) }}
+    {{ end }}
+</footer>

@@ -1,5 +1,3 @@
 <footer>
-    {{ partial "navigation" (dict "menu" .Site.Menus.footertop ) }}
     <p>{{ .Site.Copyright | safeHTML }}</p>
-    {{ partial "navigation" (dict "menu" .Site.Menus.footerbottom ) }}
 </footer>

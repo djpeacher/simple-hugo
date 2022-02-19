@@ -1,6 +1,5 @@
 <header>
-    {{ partial "navigation" (dict "menu" .Site.Menus.headertop ) }}
-
+    {{ partial "navigation" . }}
     {{ if or .Title .Description }}
         {{ if .Title }}<h1>{{ .Title | safeHTML }}</h1>{{ end }}
         {{ if .Description }}<p>{{ .Description | safeHTML }}</p>{{ end }}
@@ -9,6 +8,4 @@
         {{ if .Site.Title }}<h1>{{ $title | safeHTML }}</h1>{{ end }}
         {{ if .Site.Params.Subtitle }}<p>{{ .Site.Params.Subtitle | safeHTML }}</p>{{ end }}
     {{ end }}
-
-    {{ partial "navigation" (dict "menu" .Site.Menus.headerbottom ) }}
 </header>

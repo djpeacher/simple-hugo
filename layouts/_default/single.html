@@ -1,4 +1,6 @@
 {{ define "main" }}
-    <p class="meta">Posted on: {{ partial "date.html" . }}<br>{{ partial "tags.html" . }}</p>
+    {{ if .PublishDate }}
+        <p class="meta">Posted on: {{ partial "date.html" . }}<br>{{ partial "tags.html" . }}</p>
+    {{ end }}
     {{ .Content }}
 {{ end }}

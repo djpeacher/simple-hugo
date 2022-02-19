@@ -1,7 +1,7 @@
 <header>
     {{ partial "navigation" (dict "menu" .Site.Menus.headertop ) }}
 
-    {{ if and (.Site.Params.UpdateHeader | default true) (or .Title .Description) }}
+    {{ if or .Title .Description }}
         {{ if .Title }}<h1>{{ .Title | safeHTML }}</h1>{{ end }}
         {{ if .Description }}<p>{{ .Description | safeHTML }}</p>{{ end }}
     {{ else }}

@@ -1,5 +1,4 @@
 {{ define "main" }}
-    {{ partial "metadata.html" . }}
-    {{ partial "heading.html" . }}
+    <p class="meta">Posted on: {{ partial "date.html" . }}<br>{{ partial "tags.html" . }}</p>
     {{ .Content }}
 {{ end }}

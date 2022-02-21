@@ -9,4 +9,35 @@
     {{ $title := print .Title " | " .Site.Title}}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <title>{{ $title }}</title>
+    <style>
+        /* Light theme */
+        :root {
+            --bg: {{ .Site.Params.Light.bg }};
+            --accent-bg: {{ .Site.Params.Light.accentBg }};
+            --text: {{ .Site.Params.Light.text }};
+            --text-light: {{ .Site.Params.Light.textLight }};
+            --border: {{ .Site.Params.Light.border }};
+            --accent: {{ .Site.Params.Light.accent }};
+            --code: {{ .Site.Params.Light.code }};
+            --preformatted: {{ .Site.Params.Light.preformatted }};
+            --marked: {{ .Site.Params.Light.marked }};
+            --disabled: {{ .Site.Params.Light.disabled }};
+          }
+          
+          /* Dark theme */
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --bg: {{.Site.Params.Dark.bg }};
+              --accent-bg: {{.Site.Params.Dark.accentBg }};
+              --text: {{.Site.Params.Dark.text }};
+              --text-light: {{.Site.Params.Dark.textLight }};
+              --border: {{.Site.Params.Dark.border }};
+              --accent: {{.Site.Params.Dark.accent }};
+              --code: {{.Site.Params.Dark.code }};
+              --preformatted: {{.Site.Params.Dark.preformatted }};
+              --marked: {{ .Site.Params.Dark.marked }};
+              --disabled: {{.Site.Params.Dark.disabled }};
+            }
+          }
+    </style>
 </head>

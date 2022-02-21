@@ -1,3 +1,4 @@
+/* Adapted from https://github.com/kevquirk/simple.css-site/blob/main/assets/css/style.css */
 .post-link {
   font-size: 1.6rem;
   font-weight: bold;
@@ -10,6 +11,10 @@
 
 .blog-item {
   margin-bottom: 4rem;
+}
+
+.blog-item:last-child {
+  margin-bottom: 0rem;
 }
 
 nav a.current {

@@ -31,6 +31,8 @@ copyright: 'Made with ❤️ by Barry Bluejeans'
 params:
   title: My New Hugo Site # Used in header > nav > h1.
   subtitle: Very Cool # Used in header > nav > p.
+  replyEmail: me@example.com # If set, a reply button will appear at the end of posts in the /post directory.
+  replyButton: Reply via email # You can override the text the reply button displays.
   light:
     ... # You can override any of the simple.css light theme colors here.
   dark:

@@ -52,6 +52,14 @@ nav a.current {
 .button:focus {
   filter: brightness(1.4);
   cursor: pointer;
+  text-decoration: none;
+}
+
+.replyButton {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .icon {

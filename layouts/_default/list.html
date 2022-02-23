@@ -5,7 +5,7 @@
             <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
             <p class="meta"><i>{{ default .Summary .Description }}</i></p>
             <p class="meta">
-                {{ partial "date.html" . }}
+                {{ partial "date.html" .PublishDate }}
                 <br />
                 {{ partial "tags.html" . }}
             </p>

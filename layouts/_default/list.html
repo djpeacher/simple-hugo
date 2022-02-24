@@ -1,14 +1,6 @@
 {{ define "main" }}
     {{ .Content }}
     {{ range .Pages }}
-        <div class="blog-item">
-            <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <p class="meta"><i>{{ default .Summary .Description }}</i></p>
-            <p class="meta">
-                {{ partial "date.html" .PublishDate }}
-                <br />
-                {{ partial "tags.html" . }}
-            </p>
-        </div>
+        {{ partial "blog_item.html"  . }}
     {{ end }}
 {{ end }}

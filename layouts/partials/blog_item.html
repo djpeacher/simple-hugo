@@ -1,0 +1,7 @@
+<div class="blog-item">
+    <p class="meta" style="margin-bottom: 0rem;">
+        {{ partial "date.html" .PublishDate }}
+    </p>
+    <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <p class="meta" style="margin-top: 0rem;"><i>{{ default .Summary .Description }}</i></p>
+</div>

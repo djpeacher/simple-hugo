@@ -1,3 +1,6 @@
 {{ define "main" }}
     {{ .Content }}
+    {{ range where .Site.RegularPages "Type" "posts" }}
+        {{ partial "blog_item.html"  . }}
+    {{ end }}
 {{ end }}

@@ -1,11 +1,11 @@
 <header>
     {{ partial "navigation" . }}
-    {{ if or .Title .Description }}
-        {{ if .Title }}<h1>{{ .Title | safeHTML }}</h1>{{ end }}
-        {{ if .Description }}<p>{{ .Description | safeHTML }}</p>{{ end }}
-    {{ else }}
+    {{ if eq .IsHome true }}
         {{ $title := default .Site.Title .Site.Params.Title }}
         {{ if .Site.Title }}<h1>{{ $title | safeHTML }}</h1>{{ end }}
         {{ if .Site.Params.Subtitle }}<p>{{ .Site.Params.Subtitle | safeHTML }}</p>{{ end }}
+    {{ else }}
+        {{ if .Title }}<h1>{{ .Title | safeHTML }}</h1>{{ end }}
+        {{ if .Description }}<p>{{ .Description | safeHTML }}</p>{{ end }}
     {{ end }}
 </header>

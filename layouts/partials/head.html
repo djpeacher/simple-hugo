@@ -1,6 +1,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ (.Description | default .Summary) | plainify }}{{ end }}"/>
+    <meta name="keywords" content='{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}'/>
+    <link rel="canonical" href="{{ .Permalink }}" />
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <link rel="stylesheet" href='/css/simple-plus.css'>
     <link rel="stylesheet" href='/css/custom.css'>

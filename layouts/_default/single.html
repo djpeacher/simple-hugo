@@ -1,14 +1,5 @@
 {{ define "main" }}
     {{ $isPost := eq .Type "posts" }}
-    <p class="meta">
-        {{ if .PublishDate }}
-            Posted on: {{ partial "date.html" .PublishDate }}<br>
-        {{ end }}
-        {{ if ne .PublishDate .Lastmod }}
-            Updated on: {{ partial "date.html" .Lastmod }}<br>
-        {{ end }}
-        {{ partial "tags.html" . }}
-    </p>
     {{ .Content }}
     {{ if and $isPost .Site.Params.ReplyEmail }}
         <a class="button replyButton" href="mailto: {{ .Site.Params.ReplyEmail }}?subject=Reply to '{{ .Title }}'">{{ .Site.Params.ReplyButton | default  "Reply via email" }}</a>

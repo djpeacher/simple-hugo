@@ -1,25 +1,22 @@
 /* Adapted from https://github.com/kevquirk/simple.css-site/blob/main/assets/css/style.css */
-.post-link {
-  font-size: 1.6rem;
-  font-weight: bold;
+nav a.current {
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+
+time {
+  font-variant-numeric: tabular-nums;
 }
 
 .meta {
   color: var(--text-light);
   font-size: 1rem;
-}
-
-.blog-item {
-  margin-bottom: 4rem;
-}
-
-.blog-item:last-child {
-  margin-bottom: 0rem;
-}
-
-nav a.current {
-  color: var(--accent) !important;
-  border-color: var(--accent);
 }
 
 .notice {
@@ -71,4 +68,21 @@ nav a.current {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  font-variant-numeric: tabular-nums;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+.list a {
+  text-decoration: none;
+}
+
+.list a:hover {
+  text-decoration: underline;
 }

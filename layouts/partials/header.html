@@ -8,4 +8,14 @@
         {{ if .Title }}<h1>{{ .Title | safeHTML }}</h1>{{ end }}
         {{ if .Description }}<p>{{ .Description | safeHTML }}</p>{{ end }}
     {{ end }}
+    {{ if .IsPage }}
+        {{ if .PublishDate }}
+            {{ partial "date.html" .PublishDate }}
+        {{ end }}
+        {{ if .Lastmod }}
+            {{ if ne .PublishDate .Lastmod }}
+                {{ partial "date.html" .Lastmod }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
 </header>

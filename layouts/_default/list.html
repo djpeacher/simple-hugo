@@ -1,6 +1,8 @@
 {{ define "main" }}
     {{ .Content }}
-    {{ range .Pages }}
-        {{ partial "blog_item.html"  . }}
-    {{ end }}
+    <ul class="list">
+        {{ range .Pages }}
+            {{ partial "blog_item.html" . }}
+        {{ end }}
+    </ul>
 {{ end }}

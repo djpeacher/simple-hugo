@@ -79,8 +79,17 @@ time {
   display: table;
 }
 
+.list li {
+  display: flex;
+  align-items: baseline;
+}
+
 .list a {
   text-decoration: none;
+}
+
+.list small {
+  flex-shrink: 0;
 }
 
 .list a:hover {

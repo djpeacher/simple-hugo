@@ -7,7 +7,6 @@ nav a.current {
 
 a:hover {
   color: var(--text-light);
-  text-decoration: underline;
 }
 
 time {
@@ -84,14 +83,6 @@ time {
   align-items: baseline;
 }
 
-.list a {
-  text-decoration: none;
-}
-
 .list small {
   flex-shrink: 0;
-}
-
-.list a:hover {
-  text-decoration: underline;
 }

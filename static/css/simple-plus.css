@@ -87,6 +87,13 @@ time {
   align-items: baseline;
 }
 
+@media (max-width: 500px) {
+  .list li {
+    display: grid;
+    margin-bottom: 1rem;
+  }
+}
+
 .list small {
   flex-shrink: 0;
 }

@@ -1,12 +1,14 @@
 <li>
     <small style="display: inline-block; width: 5em;"><time>{{ .PublishDate.Format "060102" }}</time></small>
     {{ if .Params.Categories }}
-    <small style="margin-right: 5px; ">
-        {{ range $category := .Params.Categories }}
-        <mark style="background-color: var(--disabled)"><a href="/categories/{{ $category | lower }}/">{{ $category
-                }}</a></mark>
+    <span>
+        <small style="margin-right: 5px; ">
+            {{ range $category := .Params.Categories }}
+            <mark style="background-color: var(--disabled)"><a href="/categories/{{ $category | lower }}/">{{ $category
+                    }}</a></mark>
+            {{ end }}
+        </small>
         {{ end }}
-    </small>
-    {{ end }}
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </span>
 </li>

@@ -58,6 +58,10 @@ time {
   margin-top: 3rem;
 }
 
+.replyButton:hover {
+  color: var(--bg);
+}
+
 .icon {
   vertical-align: sub;
   padding-right: 0.25rem;

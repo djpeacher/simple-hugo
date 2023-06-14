@@ -2,6 +2,6 @@
     {{ $isPost := eq .Type "posts" }}
     {{ .Content }}
     {{ if and $isPost .Site.Params.ReplyEmail }}
-        <a class="button replyButton" href="mailto: {{ .Site.Params.ReplyEmail }}?subject=Reply to '{{ .Title }}'">{{ .Site.Params.ReplyButton | default  "Reply via email" }}</a>
+        <a class="button replyButton" href="mailto: {{ .Site.Params.ReplyEmail }}?subject=RE: {{ .Title }}">{{ .Site.Params.ReplyButton | default  "Reply via email" }}</a>
     {{ end }}
 {{ end }}

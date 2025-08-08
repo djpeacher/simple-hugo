@@ -4,7 +4,7 @@
     <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ (.Description | default .Summary) | plainify }}{{ end }}"/>
     <meta name="keywords" content='{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}'/>
     <link rel="canonical" href="{{ .Permalink }}" />
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/simpledotcss@2.3.7/simple.min.css">
     <link rel="stylesheet" href='/css/simple-plus.css'>
     <link rel="stylesheet" href='/css/custom.css'>
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
